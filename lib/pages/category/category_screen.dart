@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:init_project_flutter/component/main_header.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -6,12 +7,14 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        color: Colors.red,
-        child: const Text(
-          "Category SCREEN",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      child: Column(
+        children: [
+          const MainHeader(),
+          Container(
+            color: Colors.grey,
+            child: const Text("Category"),
+          )
+        ],
       ),
     );
   }

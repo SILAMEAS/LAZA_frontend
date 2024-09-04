@@ -62,23 +62,31 @@ class MainHeader extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          Container(
-            height: 46,
-            width: 46,
-            // color: Colors.white,
-            decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(blurRadius: 8, color: Colors.grey.withOpacity(0.6))
-                ]),
-            child: const IconButton(
-                onPressed: null,
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Colors.grey,
-                )),
-          )
+          Badge(
+            label: const Text("1"),
+            backgroundColor: Theme.of(context).primaryColor,
+            child: Container(
+              height: 46,
+              width: 46,
+              // color: Colors.white,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 8, color: Colors.grey.withOpacity(0.6))
+                  ]),
+              child: const IconButton(
+                  onPressed: null,
+                  icon: Icon(
+                    Icons.shopping_cart_outlined,
+                    color: Colors.grey,
+                  )),
+            ),
+          ),
+          const SizedBox(
+            width: 5,
+          ),
         ],
       ),
     );

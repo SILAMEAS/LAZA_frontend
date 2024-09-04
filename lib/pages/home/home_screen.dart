@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:init_project_flutter/component/main_header.dart';
+
+import '../../component/main_header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,7 +9,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
-        children: [MainHeader(), Text("HOme")],
+        children: [
+          const MainHeader(),
+          Container(
+            color: Colors.grey,
+            child: const Text("HOme"),
+          )
+        ],
       ),
     );
   }
